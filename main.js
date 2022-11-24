@@ -1,8 +1,9 @@
 let computerChoice;
 let computerSelection;
-
-
 let playerSelection;
+let playerScore = 0;
+let computerScore = 0;
+let numberOfRounds = 3;
 
 /*console.log(playerSelection)*/
 
@@ -32,22 +33,26 @@ function playRound(playerSelection,computerSelection){
     if (playerSelection === "paper"  && computerSelection === "rock"){
         result = "You win! " + playerSelection + " beats " + computerSelection;
         /*console.log(result);*/
+        playerScore ++
         return result
     }
 
     if (playerSelection === "rock"  && computerSelection === "scissors"){
         result = "You win! " + playerSelection + " beats " + computerSelection;
         /*console.log(result);*/
+        playerScore ++
         return result
     }
 
     if (playerSelection === "scissors"  && computerSelection === "paper"){
         result = "You win! " + playerSelection + " beats " + computerSelection;
         /*console.log(result);*/
+        playerScore ++
         return result
     }else {
         result = "You Lose! " + computerSelection + " beats " + playerSelection;
         /*console.log(result);*/
+        computerScore ++
         return result;
     }
     
@@ -59,7 +64,7 @@ function playRound(playerSelection,computerSelection){
 
 /*console.log(playRound(playerSelection,computerSelection))*/
 
-let numberOfRounds = 3
+
 
 for (let i = 0; i < numberOfRounds; i++){
     
@@ -68,5 +73,9 @@ for (let i = 0; i < numberOfRounds; i++){
     let computerSelection = getComputerChoice();
     playerSelection = playerSelection.toLowerCase()
     console.log(playRound(playerSelection,computerSelection))
+    /*console.log(playerScore)
+    console.log(computerScore)*/
 
 }
+
+console.log("Player Core = "+playerScore + " Computer Score = "+computerScore)
