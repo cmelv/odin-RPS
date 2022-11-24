@@ -78,4 +78,4 @@ for (let i = 0; i < numberOfRounds; i++){
 
 }
 
-console.log("Player Core = "+playerScore + " Computer Score = "+computerScore)
+console.log("Player Sore = "+playerScore + " Computer Score = "+computerScore)
