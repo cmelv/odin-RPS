@@ -66,13 +66,18 @@ function playRound(playerSelection,computerSelection){
 
 const choices = document.querySelectorAll(".button")
 const cpuChoice = document.querySelector(".cpu-choice")
-const gameResult = document.querySelector(".result")
-const runningScore = document.querySelector(".running-score")
+
+
 const gameOver = document.querySelector(".game-over")
+const playerScoreDisplay = document.querySelector(".playerScoreDisplay")
+const cpuScoreDisplay = document.querySelector(".cpuScoreDisplay")
+const message = document.querySelector(".message")
 
 
 gameState = true
 
+playerScoreDisplay.textContent = playerScore
+cpuScoreDisplay.textContent = computerScore
 
 choices.forEach((button) => {
     button.addEventListener("click", (e) => {
@@ -80,13 +85,21 @@ choices.forEach((button) => {
             playRound(button.id, getComputerChoice())
         
         cpuChoice.textContent = "The computer chose " + computerChoice
-        gameResult.textContent = result
-        runningScore.textContent = "Player Score = " + playerScore + " vs " + "Computer Score = " + computerScore
+        
+        playerScoreDisplay.textContent = playerScore
+        cpuScoreDisplay.textContent = computerScore
+        message.textContent = result
+        
         if (playerScore >= winningScore || computerScore >= winningScore){
             gameState = false
-            gameResult.textContent = ""
-            runningScore.textContent = ""
-            gameOver.textContent = "Game Over - Player Score = "+ playerScore + " vs " + "Computer Score = " + computerScore
+            if (playerScore = winningScore){
+                message.textContent = "Game Over - You Win"
+
+            }else message.textContent = "Game Over - You Lose"
+            
+            
+            
+            
             
 
         }
