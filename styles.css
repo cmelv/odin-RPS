@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #3b3a3a;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 52px;
+}
+.sub-header{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 22px;
+}
+.game-board{
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    justify-content: space-between;
+    /*border: solid blue;*/
+
+}
+.player-heading{
+    font-size: 32px;
+}
+.player-board{
+    display: flex;
+    flex-direction: column;
+    /*border: solid red;*/
+    align-items: center;
+    margin-left: 50px;
+
+}
+.player-choice{
+    display: flex;
+    flex-direction: row;
+    /*border: solid coral;*/
+    justify-content: space-between;
+
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    /*border: solid red;*/
+    align-items: center;
+
+}
+
+
+.cpu-board{
+    display: flex;
+    flex-direction: column;
+    /*border: solid red;*/
+    align-items: center;
+    margin-right: 50px;
+
+}
+.CPU-choice{
+    display: flex;
+    flex-direction: row;
+    /*border: solid coral;*/
+
+}
+.CPU{
+    display: flex;
+    flex-direction: column;
+    /*border: solid red;*/
+    align-items: center;
+
+}
+
+.scoreboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: solid red;*/
+}
+.score-header{
+    font-size: 42px;
+
+}
+.scores{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 34px;
+    /*border: solid coral;*/
+}
+.player-score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cpu-score{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.message{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 22px;
+}
+.footer{
+    
+    position: absolute;
+    bottom: 0;
+    left: 46%;
+    align-items: center;
+
+}
+
+
+img{
+    width: 100px;
+}
