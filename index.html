@@ -5,16 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Rock Paper Scissors</h1>
-
-    <div class="buttons">
-        <button id="rock" class="button">Rock</button>
-        <button id="paper" class="button">Paper</button>
-        <button id="scissors" class="button">Scissors</button>
+    <div class="header">
+        <h1>Rock Paper Scissors</h1>
     </div>
+
+    <div class="sub-header">
+        <p>First to 5 Wins</p>
+    </div>
+
+    <div class="game-board">
+
+        <div class="player-board">
+            <p class="player-heading">Player</p>
+            <div class="player-choice">
+                <div class="player player-rock">
+                    <img src="./img/rock.png" id="rock" class="button">
+                    <p>Rock</p>
+                </div>
+
+                <div class="player player-paper">
+                    <img src="./img/paper.png" id="paper" class="button">
+                    <p>Paper</p>
+                </div>
+
+                <div class="player player-rock">
+                    <img src="./img/scissors.png" id="scissors"  class="button">
+                    <p>Scissors</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="scoreboard">
+            <div class="score-header">Score</div>
+            <div class="scores">
+                <div class="player-score">
+                    <div>Player Score</div>
+                    <div class="playerScoreDisplay"></div>
+                </div>
+                <div class="cpu-score">
+                    <div>CPU Score</div>
+                    <div class="cpuScoreDisplay"></div>
+                </div>
+            </div>
+            <div class="message"></div>
+        </div>
+
+
+        <div class="cpu-board">
+            <p class="player-heading">CPU</p>
+            <div class="CPU-choice">
+                <div class="CPU CPU-rock">
+                    <img src="./img/rock.png" id="rock">
+                    <p>Rock</p>
+                </div>
+
+                <div class="CPU CPU-paper">
+                    <img src="./img/paper.png" id="paper">
+                    <p>Paper</p>
+                </div>
+
+                <div class="CPU CPU-rock">
+                    <img src="./img/scissors.png" id="scissors">
+                    <p>Scissors</p>
+                </div>
+            </div>
+        
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-words">Copyright @ Melv 2022</div>
+    </div>
+
 
     <div class="cpu-choice"></div>
     <div class="result"></div>
