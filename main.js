@@ -4,8 +4,9 @@ let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 let numberOfRounds = 3;
+let winningScore = 5
 
-/*console.log(playerSelection)*/
+
 
 
 function getComputerChoice(){
@@ -62,20 +63,47 @@ function playRound(playerSelection,computerSelection){
     
 }
 
-/*console.log(playRound(playerSelection,computerSelection))*/
+
+const choices = document.querySelectorAll(".button")
+const cpuChoice = document.querySelector(".cpu-choice")
+const gameResult = document.querySelector(".result")
+const runningScore = document.querySelector(".running-score")
+const gameOver = document.querySelector(".game-over")
+
+
+gameState = true
+
+
+choices.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        if (gameState){
+            playRound(button.id, getComputerChoice())
+        
+        cpuChoice.textContent = "The computer chose " + computerChoice
+        gameResult.textContent = result
+        runningScore.textContent = "Player Score = " + playerScore + " vs " + "Computer Score = " + computerScore
+        if (playerScore >= winningScore || computerScore >= winningScore){
+            gameState = false
+            gameResult.textContent = ""
+            runningScore.textContent = ""
+            gameOver.textContent = "Game Over - Player Score = "+ playerScore + " vs " + "Computer Score = " + computerScore
+            
+
+        }
+        
+        
+        }else{return}
+        
+
+
+        
+
+    });
+});
 
 
 
-for (let i = 0; i < numberOfRounds; i++){
-    
-    /*let playerSelection = "Rock";*/
-    playerSelection = prompt("type player selection")
-    let computerSelection = getComputerChoice();
-    playerSelection = playerSelection.toLowerCase()
-    console.log(playRound(playerSelection,computerSelection))
-    /*console.log(playerScore)
-    console.log(computerScore)*/
 
-}
 
-console.log("Player Sore = "+playerScore + " Computer Score = "+computerScore)
+
+
