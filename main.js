@@ -4,7 +4,7 @@ let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 let numberOfRounds = 3;
-let winningScore = 5
+let winningScore = 5;
 
 
 
@@ -63,28 +63,43 @@ function playRound(playerSelection,computerSelection){
     
 }
 
+function newgame(){
+    console.log("newgame")
+    playerScore = 0
+    computerScore = 0
+    playerScoreDisplay.textContent = playerScore
+    cpuScoreDisplay.textContent = computerScore
+    message.textContent = "Shoot - make a selection"
+    gameState = true
+}
+
 
 const choices = document.querySelectorAll(".button")
 const cpuChoice = document.querySelector(".cpu-choice")
+const newGameBtn = document.querySelector(".new-gamebtn")
 
 
 const gameOver = document.querySelector(".game-over")
 const playerScoreDisplay = document.querySelector(".playerScoreDisplay")
 const cpuScoreDisplay = document.querySelector(".cpuScoreDisplay")
 const message = document.querySelector(".message")
+const winningScoreDisplay = document.querySelector(".subHeader")
 
-
+message.textContent = "Shoot - make a selection"
 gameState = true
 
 playerScoreDisplay.textContent = playerScore
 cpuScoreDisplay.textContent = computerScore
+winningScoreDisplay.textContent = winningScore
+
+newGameBtn.addEventListener("click",newgame)
 
 choices.forEach((button) => {
     button.addEventListener("click", (e) => {
         if (gameState){
             playRound(button.id, getComputerChoice())
         
-        cpuChoice.textContent = "The computer chose " + computerChoice
+        
         
         playerScoreDisplay.textContent = playerScore
         cpuScoreDisplay.textContent = computerScore
@@ -92,7 +107,7 @@ choices.forEach((button) => {
         
         if (playerScore >= winningScore || computerScore >= winningScore){
             gameState = false
-            if (playerScore = winningScore){
+            if (playerScore == winningScore){
                 message.textContent = "Game Over - You Win"
 
             }else message.textContent = "Game Over - You Lose"

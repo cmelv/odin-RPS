@@ -115,9 +115,20 @@ body{
     position: absolute;
     bottom: 0;
     left: 46%;
+    padding: 5px;
     align-items: center;
 
 }
+.new-game{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.new-gamebtn{
+    width: 100px;
+    height:30px;
+}
+
 
 
 img{
