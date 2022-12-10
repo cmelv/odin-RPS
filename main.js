@@ -142,12 +142,13 @@ function newgame(){
 
 function getPlayerName(){
     playerName = prompt("Please enter your name: ")
-    console.log(playerName)
-    playerName = playerName[0].toUpperCase()+playerName.substring(1).toLowerCase()
-    console.log(playerName)
     if (playerName == null || playerName == "") {
         playerName = "Player";
       } 
+    console.log(playerName)
+    playerName = playerName[0].toUpperCase()+playerName.substring(1).toLowerCase()
+    console.log(playerName)
+
     console.log(playerName)
     scoreNameDisplay.textContent = playerName +"'s Score"
     playerNameDisplay.textContent = playerName +"'s Choice"
