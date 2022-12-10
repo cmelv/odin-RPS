@@ -1,13 +1,48 @@
+
+/*Variables*/
+
 let computerChoice;
 let computerSelection;
 let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 let numberOfRounds = 3;
-let winningScore = 5;
+let winningScore 
+
+let playerName = ""
+
+const choices = document.querySelectorAll(".button")
+const cpuChoice = document.querySelector(".cpu-choice")
+const newGameBtn = document.querySelector(".new-gamebtn")
+
+
+const gameOver = document.querySelector(".game-over")
+
+const playerScoreDisplay = document.querySelector(".playerScoreDisplay")
+const playerChoiceName = document.querySelector(".playerChoiceName")
+const playerChoiceDisplayPic = document.querySelector(".playerChoicePic")
+const scoreNameDisplay = document.querySelector(".scoreName")
+const playerNameDisplay = document.querySelector(".player-heading")
+
+
+const cpuScoreDisplay = document.querySelector(".cpuScoreDisplay")
+const CpuChoiceName = document.querySelector(".CpuChoiceName")
+const CpuChoiceDisplayPic = document.querySelector(".CpuChoicePic")
 
 
 
+const message = document.querySelector(".message")
+const winningScoreDisplay = document.querySelector(".subHeader")
+
+gameState = true
+
+playerScoreDisplay.textContent = playerScore
+cpuScoreDisplay.textContent = computerScore
+/*winningScoreDisplay.textContent = winningScore*/
+
+
+
+/*Functions*/
 
 function getComputerChoice(){
     computerChoice = Math.floor(Math.random()*3)+1;
@@ -85,37 +120,28 @@ function newgame(){
     message.classList.remove("greenmessage", "redmessage")
 }
 
+function getPlayerName(){
+    let playerName = prompt("Please enter your name: ")
+    /*if (person == null || person == "") {
+        playerName = "Player";
+      } */
+    scoreNameDisplay.textContent = playerName +"'s Score"
+    playerNameDisplay.textContent = playerName +"'s Choice"
+      
+    
+}
 
-const choices = document.querySelectorAll(".button")
-const cpuChoice = document.querySelector(".cpu-choice")
-const newGameBtn = document.querySelector(".new-gamebtn")
-
-
-const gameOver = document.querySelector(".game-over")
-
-const playerScoreDisplay = document.querySelector(".playerScoreDisplay")
-const playerChoiceName = document.querySelector(".playerChoiceName")
-const playerChoiceDisplayPic = document.querySelector(".playerChoicePic")
-
-
-const cpuScoreDisplay = document.querySelector(".cpuScoreDisplay")
-const CpuChoiceName = document.querySelector(".CpuChoiceName")
-const CpuChoiceDisplayPic = document.querySelector(".CpuChoicePic")
-
+function getNumberOfGames(){
+    winningScore = prompt("What do you want the winning score to be: ")
+    winningScoreDisplay.textContent = winningScore
+}
 
 
-const message = document.querySelector(".message")
-const winningScoreDisplay = document.querySelector(".subHeader")
-
-
-gameState = true
-
-playerScoreDisplay.textContent = playerScore
-cpuScoreDisplay.textContent = computerScore
-winningScoreDisplay.textContent = winningScore
+/*Start new game*/
 
 newGameBtn.addEventListener("click",newgame)
 
+/*Section that handles player selection*/
 choices.forEach((button) => {
     button.addEventListener("click", (e) => {
         if (gameState){
@@ -149,7 +175,7 @@ choices.forEach((button) => {
         cpuScoreDisplay.textContent = computerScore
         message.textContent = result
 
-
+        console.log(winningScore)    
         
         if (playerScore >= winningScore || computerScore >= winningScore){
             gameState = false
@@ -178,6 +204,10 @@ choices.forEach((button) => {
 
     });
 });
+
+
+getPlayerName()
+getNumberOfGames()
 
 
 
