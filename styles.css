@@ -152,11 +152,20 @@ body{
     flex-direction: column;
     align-items: center;
 }
+
+/*message section*/
 .message{
     display: flex;
     justify-content: center;
     margin-top: 16px;
-    font-size: 22px;
+    font-size: 30px;
+}
+
+.greenmessage{
+    color: green;
+}
+.redmessage{
+    color: red;
 }
 
 /*Footer section*/
@@ -174,11 +183,13 @@ body{
 .new-game{
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    
 }
 .new-gamebtn{
-    width: 100px;
-    height:30px;
+    width: 200px;
+    height:50px;
+    border-radius: 10px;
+    font-size: 25px;
 }
 
 

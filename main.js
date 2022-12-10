@@ -28,32 +28,37 @@ function playRound(playerSelection,computerSelection){
     if(playerSelection === computerSelection){
         result = "Its a Draw"
         /*console.log(result);*/
+        
         return result
     }
 
     if (playerSelection === "paper"  && computerSelection === "rock"){
-        result = "You win! " + playerSelection + " beats " + computerSelection;
+        result = "You win!";
         /*console.log(result);*/
         playerScore ++
+        
         return result
     }
 
     if (playerSelection === "rock"  && computerSelection === "scissors"){
-        result = "You win! " + playerSelection + " beats " + computerSelection;
+        result = "You win!";
         /*console.log(result);*/
         playerScore ++
+        
         return result
     }
 
     if (playerSelection === "scissors"  && computerSelection === "paper"){
-        result = "You win! " + playerSelection + " beats " + computerSelection;
+        result = "You win!";
         /*console.log(result);*/
         playerScore ++
+        
         return result
     }else {
-        result = "You Lose! " + computerSelection + " beats " + playerSelection;
+        result = "You Lose!";
         /*console.log(result);*/
         computerScore ++
+        
         return result;
     }
     
@@ -77,6 +82,7 @@ function newgame(){
     CpuChoiceDisplayPic.src = ""
     gameState = true
     message.textContent = ""
+    message.classList.remove("greenmessage", "redmessage")
 }
 
 
@@ -123,16 +129,38 @@ choices.forEach((button) => {
             
         
         
+
+
+        if (result === "You win!"){
+            message.classList.remove("greenmessage", "redmessage")
+            message.classList.add("greenmessage")
+        }
+
+        if (result === "You Lose!"){
+            message.classList.remove("greenmessage", "redmessage")
+            message.classList.add("redmessage")
+        }
+        if (result === "Its a Draw"){
+            message.classList.remove("greenmessage", "redmessage")
+            
+        }
+
         playerScoreDisplay.textContent = playerScore
         cpuScoreDisplay.textContent = computerScore
         message.textContent = result
+
+
         
         if (playerScore >= winningScore || computerScore >= winningScore){
             gameState = false
             if (playerScore == winningScore){
+                message.classList.add("greenmessage")
                 message.textContent = "Game Over - You Win"
 
-            }else message.textContent = "Game Over - You Lose"
+            }else {
+                message.textContent = "Game Over - You Lose"
+                message.classList.add("redmessage")
+            }
             
             
             
