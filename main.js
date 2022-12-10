@@ -14,6 +14,7 @@ let playerName = ""
 const choices = document.querySelectorAll(".button")
 const cpuChoice = document.querySelector(".cpu-choice")
 const newGameBtn = document.querySelector(".new-gamebtn")
+const playAgainBtn = document.querySelector(".playagain-gamebtn")
 
 
 const gameOver = document.querySelector(".game-over")
@@ -103,7 +104,7 @@ function playRound(playerSelection,computerSelection){
     
 }
 
-function newgame(){
+function playAgain(){
     console.log("newgame")
     playerScore = 0
     computerScore = 0
@@ -120,11 +121,34 @@ function newgame(){
     message.classList.remove("greenmessage", "redmessage")
 }
 
+function newgame(){
+    console.log("newgame")
+    playerScore = 0
+    computerScore = 0
+    playerScoreDisplay.textContent = playerScore
+    cpuScoreDisplay.textContent = computerScore
+                /* Adds player choice display pic and words*/ 
+    playerChoiceName.textContent = ""
+    playerChoiceDisplayPic.src = ""
+                /* Adds CPU choice display pic and words*/
+    CpuChoiceName.textContent = ""
+    CpuChoiceDisplayPic.src = ""
+    gameState = true
+    message.textContent = ""
+    message.classList.remove("greenmessage", "redmessage")
+    getPlayerName()
+    getNumberOfGames()
+}
+
 function getPlayerName(){
-    let playerName = prompt("Please enter your name: ")
-    /*if (person == null || person == "") {
+    playerName = prompt("Please enter your name: ")
+    console.log(playerName)
+    playerName = playerName[0].toUpperCase()+playerName.substring(1).toLowerCase()
+    console.log(playerName)
+    if (playerName == null || playerName == "") {
         playerName = "Player";
-      } */
+      } 
+    console.log(playerName)
     scoreNameDisplay.textContent = playerName +"'s Score"
     playerNameDisplay.textContent = playerName +"'s Choice"
       
@@ -133,6 +157,9 @@ function getPlayerName(){
 
 function getNumberOfGames(){
     winningScore = prompt("What do you want the winning score to be: ")
+    if (winningScore == null || winningScore == "") {
+        winningScore = 5;
+      } 
     winningScoreDisplay.textContent = winningScore
 }
 
@@ -140,6 +167,7 @@ function getNumberOfGames(){
 /*Start new game*/
 
 newGameBtn.addEventListener("click",newgame)
+playAgainBtn.addEventListener("click",playAgain)
 
 /*Section that handles player selection*/
 choices.forEach((button) => {

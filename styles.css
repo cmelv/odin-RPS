@@ -196,6 +196,15 @@ body{
     height:50px;
     border-radius: 10px;
     font-size: 25px;
+    margin: 10px;
+}
+
+.playagain-gamebtn{
+    width: 200px;
+    height:50px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 10px;
 }
 
 
