@@ -111,6 +111,9 @@ choices.forEach((button) => {
             /* Adds player choice display pic and words*/ 
             playerChoiceName.textContent = button.id
             playerChoiceDisplayPic.src = "./img/"+button.id+".png"
+            /* Adds CPU choice display pic and words*/
+            CpuChoiceName.textContent = computerChoice
+            CpuChoiceDisplayPic.src = "./img/"+computerChoice+".png"
             
         
         
