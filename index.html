@@ -18,22 +18,12 @@
 
     <div class="game-board">
 
-        <div class="player-board">
-            <p class="player-heading">Player</p>
-            <div class="player-choice">
-                <div class="player player-rock">
-                    <img src="./img/rock.png" id="rock" class="button">
-                    <p>Rock</p>
-                </div>
-
-                <div class="player player-paper">
-                    <img src="./img/paper.png" id="paper" class="button">
-                    <p>Paper</p>
-                </div>
-
-                <div class="player player-rock">
-                    <img src="./img/scissors.png" id="scissors"  class="button">
-                    <p>Scissors</p>
+        <div class="display-player">
+            <p class="player-heading">Player Choice</p>
+            <div class="player-choiceDisplay-container">
+                <div class="player-choiceDisplay">
+                    <img src="" class="playerChoicePic">
+                    <p class="playerChoiceName"></p>
                 </div>
             </div>
         </div>
@@ -54,27 +44,36 @@
         </div>
 
 
-        <div class="cpu-board">
-            <p class="player-heading">CPU</p>
-            <div class="CPU-choice">
-                <div class="CPU CPU-rock">
-                    <img src="./img/rock.png" id="rock">
-                    <p>Rock</p>
-                </div>
-
-                <div class="CPU CPU-paper">
-                    <img src="./img/paper.png" id="paper">
-                    <p>Paper</p>
-                </div>
-
-                <div class="CPU CPU-rock">
-                    <img src="./img/scissors.png" id="scissors">
-                    <p>Scissors</p>
+        <div class="display-CPU">
+            <p class="cpu-heading">Computer Choice</p>
+            <div class="cpu-choiceDisplay-container">
+                <div class="cpu-choiceDisplay">
+                    <img src="" class="cpuChoicePic">
+                    <p class="CpuChoiceName"></p>
                 </div>
             </div>
-        
         </div>
 
+    </div>
+
+    <div class="player-board">
+        <p class="player-heading">Make your choice</p>
+        <div class="player-choice">
+            <div class="player player-rock">
+                <img src="./img/rock.png" id="rock" class="button">
+                <p>Rock</p>
+            </div>
+
+            <div class="player player-paper">
+                <img src="./img/paper.png" id="paper" class="button">
+                <p>Paper</p>
+            </div>
+
+            <div class="player player-rock">
+                <img src="./img/scissors.png" id="scissors"  class="button">
+                <p>Scissors</p>
+            </div>
+        </div>
     </div>
 
     <div class="new-game">

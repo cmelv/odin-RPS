@@ -80,8 +80,18 @@ const newGameBtn = document.querySelector(".new-gamebtn")
 
 
 const gameOver = document.querySelector(".game-over")
+
 const playerScoreDisplay = document.querySelector(".playerScoreDisplay")
+const playerChoiceName = document.querySelector(".playerChoiceName")
+const playerChoiceDisplayPic = document.querySelector(".playerChoicePic")
+
+
 const cpuScoreDisplay = document.querySelector(".cpuScoreDisplay")
+const CpuChoiceName = document.querySelector(".CpuChoiceName")
+const CpuChoiceDisplayPic = document.querySelector(".CpuChoicePic")
+
+
+
 const message = document.querySelector(".message")
 const winningScoreDisplay = document.querySelector(".subHeader")
 
@@ -98,7 +108,10 @@ choices.forEach((button) => {
     button.addEventListener("click", (e) => {
         if (gameState){
             playRound(button.id, getComputerChoice())
-        
+            /* Adds player choice display pic and words*/ 
+            playerChoiceName.textContent = button.id
+            playerChoiceDisplayPic.src = "./img/"+button.id+".png"
+            
         
         
         playerScoreDisplay.textContent = playerScore
