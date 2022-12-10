@@ -69,8 +69,14 @@ function newgame(){
     computerScore = 0
     playerScoreDisplay.textContent = playerScore
     cpuScoreDisplay.textContent = computerScore
-    message.textContent = "Shoot - make a selection"
+                /* Adds player choice display pic and words*/ 
+    playerChoiceName.textContent = ""
+    playerChoiceDisplayPic.src = ""
+                /* Adds CPU choice display pic and words*/
+    CpuChoiceName.textContent = ""
+    CpuChoiceDisplayPic.src = ""
     gameState = true
+    message.textContent = ""
 }
 
 
@@ -95,7 +101,7 @@ const CpuChoiceDisplayPic = document.querySelector(".CpuChoicePic")
 const message = document.querySelector(".message")
 const winningScoreDisplay = document.querySelector(".subHeader")
 
-message.textContent = "Shoot - make a selection"
+
 gameState = true
 
 playerScoreDisplay.textContent = playerScore

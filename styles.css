@@ -6,6 +6,8 @@ body{
     flex-direction: column;
     color: aliceblue;
 }
+
+/*Header section*/
 .header{
     display: flex;
     justify-content: center;
@@ -18,23 +20,27 @@ body{
     color: aliceblue;
     font-size: 22px;
 }
+
+/* main game board section*/
+
 .game-board{
     display: flex;
     flex-direction: row;
     color: aliceblue;
-    justify-content: space-between;
+    justify-content:center;
+    gap:200px;
     /*border: solid blue;*/
 
 }
-.player-heading{
-    font-size: 32px;
-}
+
+/*Select rock paper scissors section*/
+
 .player-board{
     display: flex;
     flex-direction: column;
     /*border: solid red;*/
     align-items: center;
-    margin-left: 50px;
+    
 
 }
 .player-choice{
@@ -42,6 +48,11 @@ body{
     flex-direction: row;
     /*border: solid coral;*/
     justify-content: space-between;
+
+}
+.button{
+    /*border: solid coral;*/
+    width:150px;
 
 }
 .player{
@@ -52,29 +63,66 @@ body{
 
 }
 
+/* Player display section*/
 
-.cpu-board{
+.display-player{
     display: flex;
     flex-direction: column;
     /*border: solid red;*/
     align-items: center;
-    margin-right: 50px;
+    width:250px;
 
 }
-.CPU-choice{
-    display: flex;
-    flex-direction: row;
+
+.player-heading{
+    font-size: 32px;
+}
+.player-choiceDisplay{
+    width:100px;
+    height:80px;
     /*border: solid coral;*/
-
 }
-.CPU{
+.playerChoicePic{
+    width:100px;
+   /* border: solid coral;*/
+}
+
+.playerChoiceName{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*CPU display section*/
+
+.display-CPU{
     display: flex;
     flex-direction: column;
     /*border: solid red;*/
     align-items: center;
+    width:250px;
 
 }
 
+.cpu-heading{
+    font-size: 32px;
+}
+.cpu-choiceDisplay{
+    width:100px;
+    height:80px;
+    /*border: solid coral;*/
+}
+.CpuChoicePic{
+    width:100px;
+    /*border: solid coral;*/
+}
+.CpuChoiceName{
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Score board section*/
 .scoreboard{
     display: flex;
     flex-direction: column;
@@ -110,6 +158,8 @@ body{
     margin-top: 16px;
     font-size: 22px;
 }
+
+/*Footer section*/
 .footer{
     
     position: absolute;
@@ -119,10 +169,12 @@ body{
     align-items: center;
 
 }
+
+/*New Game button*/
 .new-game{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 15px;
 }
 .new-gamebtn{
     width: 100px;
@@ -131,6 +183,3 @@ body{
 
 
 
-img{
-    width: 100px;
-}
